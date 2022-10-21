@@ -27,3 +27,4 @@ Tourist Checklist
 
 This repository hold some code from github
 
+Hello, I'm here! -Kai Wilson
