@@ -22,7 +22,7 @@ This is a basic static HTML starter project you can build on however you like. N
 - Need more help? [Check out our Help Center](https://help.glitch.com/) for answers to any common questions.
 - Ready to make it official? [Become a paid Glitch member](https://glitch.com/pricing) to boost your app with private sharing, more storage and memory, domains and more.
 
-Tourist Checklist
+Checklist for packing for vacay 
 
 
 This repository hold some code from github
