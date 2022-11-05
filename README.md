@@ -1,32 +1,14 @@
+Packing for a Vacation in South Florida
+Our project titled “Packing for A Vacation in (South) Florida” focuses on a multi-step process and general checklist needed in order to prevent extra spending and being unprepared for your stay away from home. This checklist serves the large tourist community that flocks to Florida all year round for an assortment of amenities and reputable attractions.
 
-# Hello Website (blank)
+Who worked on this project?
+-Kai Wilson
 
-This is a basic static HTML starter project you can build on however you like. No need to save. While you develop your site, your changes will happen 🪄 immediately in the preview window. You can upload assets like images or audio in `assets` to the left. The rest is up to you and your imagination.
+-Maria Aguirre
 
-## What's in this project?
+-Marc Zakharov
 
-← `README.md`: That's this file, where you can tell people what your cool website does and how you built it.
-
-← `index.html`: This is the main HTML page for your site.
-
-← `style.css`: CSS files add styling rules to your content.
-
-← `script.js`: If you're feeling fancy you can add interactivity to your site with JavaScript.
-
-![Glitch](https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2FLogo_Color.svg?v=1602781328576)
-
-## You built this with Glitch!
-
-[Glitch](https://glitch.com) is a friendly community where millions of people come together to build web apps and websites.
-
-- Need more help? [Check out our Help Center](https://help.glitch.com/) for answers to any common questions.
-- Ready to make it official? [Become a paid Glitch member](https://glitch.com/pricing) to boost your app with private sharing, more storage and memory, domains and more.
-
-Checklist for packing for vacay 
-
-
-This repository hold some code from github
-
-Hello, I'm here! -Kai Wilson
-Hey how's it going? -Marc Zakharov
-Hey- Maria Aguirre 
+Sources
+Packing for a healthy vacation: your traveling medical kit (https://go.gale.com/ps/i.do?p=AONE&u=miam11506&id=GALE%7CA3753703&v=2.1&it=r)
+Advice for Packing for Motor Vacation (https://www.proquest.com/docview/168968941?pq-origsite=primo&parentSessionId=mCaUHjA7QtNOXW3T6ab2B10RKNMnX75MOWtQ3mCGljo%3D)
+South Florida (https://go-gale-com.ezproxy.fiu.edu/ps/retrieve.do?tabID=T002&resultListType=RESULT_LIST&searchResultsType=SingleTab&hitCount=4&searchType=BasicSearchForm&currentPosition=3&docId=GALE%7CA133708807&docType=Article&sort=Relevance&contentSegment=ZCUK-MOD1&prodId=PPTH&pageNum=1&contentSet=GALE%7CA133708807&searchId=R8&userGroupName=miam11506&inPS=true)
