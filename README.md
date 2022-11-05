@@ -2,6 +2,7 @@ Packing for a Vacation in South Florida
 Our project titled “Packing for A Vacation in (South) Florida” focuses on a multi-step process and general checklist needed in order to prevent extra spending and being unprepared for your stay away from home. This checklist serves the large tourist community that flocks to Florida all year round for an assortment of amenities and reputable attractions.
 
 Who worked on this project?
+
 -Kai Wilson
 
 -Maria Aguirre
