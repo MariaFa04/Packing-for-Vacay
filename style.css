@@ -152,7 +152,7 @@ button:hover {
   padding: 25px;
   background: #31AFD4;
   overflow: scroll;
-  max-height: 100%;
+  height: 800px;
 }
 
 .hidden-checklist {
