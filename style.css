@@ -13,7 +13,8 @@ html {
 /* adjust typography defaults */
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background: #081E3F
 }
 
 /* images and videos max out at full width */
@@ -21,4 +22,177 @@ img,
 video {
   height: auto;
   max-width: 100%;
+}
+
+.content-container {
+  position: relative;
+  height: 80vh;
+}
+
+i {
+  font-size: 28px;
+  color: orange;
+  display: inline-block;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+i:hover {
+  /* add your own hover effect */
+  color: red;
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+
+li {
+  font-size: 24px;
+  padding:10px;
+}
+
+.left {
+  margin-left: 10px;
+}
+
+.right {
+  float: right;
+  margin-right: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  text-shadow: 0 0 15px black;
+  color:white;
+}
+
+/* every element with this class takes up the full 
+ width and height of the screen */
+.full-screen {
+  border: 1px solid grey;
+  width: 100%;
+  height: 640vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 25px;
+  padding-top: 0;
+}
+
+.full-screen p {
+  padding: 10px;
+  font-size:24px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#slide-1 {
+  background: #bed558;
+}
+
+#slide-2 {
+  background: #2EC4B6;
+}
+
+#slide-3 {
+  background: #E9B44C;
+}
+
+#slide-4 {
+  background: #FF8600;
+}
+
+#slide-5 {
+  background: #BC96E6;
+}
+ #slide-6 {
+  background: #FF6392;
+}
+
+/* button styles */
+button.open {
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  background: #E9B44C;
+  margin: 5px;
+  float: left;
+  font-family: 'Montserrat', sans-serif;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+button.downloadButton{
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  background: #E9B44C;
+  margin: 5px;
+  float: right;
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button:hover {
+  box-shadow: inset 300px 0 0 0 #54b3d6;
+  color: white;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#checklist {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  bottom: 0;
+  width: 250px;
+  padding: 25px;
+  background: #31AFD4;
+  overflow: scroll;
+  height: 800px;
+}
+
+.hidden-checklist {
+  width: 0px;
+  overflow: hidden;
+  padding: 0;
+}
+
+
+.medical{
+  position:absolute;
+  transform:translate(-50%, -45%);
+  Left:50%;
+  filter: drop-shadow(0px 12px 20px black);
+}
+
+.Necessities{
+  position:absolute;
+  transform:translate(-50%, -10%);
+  Left:55%;
+  filter: drop-shadow(0px 12px 20px black);
+}
+
+.documents{
+  position:absolute;
+  transform:translate(-50%, -20%);
+  Left:55%;
+  filter: drop-shadow(0px 12px 20px black);
+}
+
+.map{
+  position:absolute;
+  transform:translate(-50%, 5%);
+  Left:55%;
+  filter: drop-shadow(0px 12px 20px black);
+}
+
+.games{
+  position:absolute;
+  transform:translate(-50%, 15%);
+  Left:55%;
+  filter: drop-shadow(0px 12px 20px black);
 }

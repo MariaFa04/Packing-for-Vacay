@@ -5,23 +5,676 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="https://glitch.com/favicon.ico" />
 
-    <title>Hello world!</title>
+    <title>Packing for a Vacation in South Florida</title>
+
+    <!-- import Bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
 
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
-    
-    <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <!--inserting of Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- import html2cavnas library -->
+    <script
+      src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"
+      defer
+    ></script>
+
+    <script src="script.js" defer></script>
   </head>
   <body>
     <!-- this is the start of content -->
-    <h1>Hello World!</h1>
-    <p>Wow, this is where my content will go!</p>
-    
-    <p>
-      A new paragraph! Wow!
-    </p>
-    <p>
-     Wow crazy another paragraph! 
-    </p>
+    <div>
+      <button class="open" id="toggle-checklist" onclick="toggleChecklist()">
+        Open Checklist
+      </button>
+    </div>
+
+    <div>
+      <button class="downloadButton" onclick="downloadChecklist()">
+        Download my checklist as a PNG.
+      </button>
+    </div>
+    <!--thinking about making the buttons side by side -->
+
+    <i class="bi bi-arrow-left-short left" onclick="goBack()"></i>
+    <i class="bi bi-arrow-right-short right" onclick="goForward()"></i>
+
+    <div class="content-container">
+      <!-- three placeholder sections of content -->
+      <section class="full-screen" id="slide-1">
+        <h1>Itinerary</h1>
+        <ul>
+          <h2>North Florida:</h2>
+          <blockquote>
+            <li>
+              North Florida is distinctly Southern in character by having
+              adapted the flair and customs of the South in general.
+            </li>
+          </blockquote>
+          <blockquote>
+            <li>
+              It is one of the more hospitable places on this list due to its
+              geographical location, being what natives called the “Big Bend.”
+              North Florida has great beaches on the west coast and
+              “jungle-like” growth along the southern border.
+            </li>
+          </blockquote>
+          <blockquote>
+            <li>
+              Hunting is also a well-known pastime in this part of Florida
+              because of the abundance of deer, duck, geese, quail, wild turkey,
+              fish and other games. The most popular spots are located at
+              Apalachicola River and the Ochlocknee River.
+            </li>
+          </blockquote>
+          <blockquote>
+            <li>
+              St. Marks, located near Apalachee Bay, is a picture-perfect
+              fishing village just 18 miles south of Tallahassee.
+            </li>
+          </blockquote>
+          <blockquote>
+            <li>
+              Home to the University of Florida, Gainsville is definitely worth
+              a visit. Not only can you catch a game, but you can see its
+              diverse farming country as well.
+            </li>
+          </blockquote>
+          <h2>Central Florida:</h2>
+          <blockquote>
+            <li>
+              This part of Florida is responsible for the state's famous oranges
+              and thousands of bodies of water providing multiple beautiful
+              views.
+            </li>
+          </blockquote>
+          <blockquote>
+            <li>
+              Ocala, located near the northern “ridge” section, is home to rich
+              agricultural land filled with cattle, horses and other types of
+              pastures.
+            </li>
+          </blockquote>
+          <blockquote>
+            <li>
+              If you’re looking for something more exciting, Orlando is the
+              place for you. Being the largest inland city in Florida, it offers
+              plenty of diversity in its attractions. Most notable place of
+              interest is Disney World.
+            </li>
+          </blockquote>
+          <blockquote>
+            <li>
+              If you want something a little lusher and more private, Winter
+              Park is right up your alley. It is a beautiful residential town
+              that offers quiet and peace. It’s also the home of Rollins
+              College.
+            </li>
+          </blockquote>
+          <blockquote>
+            <li>
+              Lake Wales is the heart of the scenic citrus region and home to
+              gigantic citrus canneries and the fresh fruit packing plant at
+              Waverly.
+            </li>
+          </blockquote>
+          <h2>Everglades:</h2>
+          <blockquote>
+            <li>
+              The Everglades are like a shallow spoon, where the rim of the
+              spoon represents a ridge of limestone. This is where the cities
+              are built. As you go more south, the spoon becomes so depressed
+              that land and water merge in a wilderness of salt marshes,
+              mangrove swamps and lonely beaches.
+            </li>
+          </blockquote>
+          <blockquote>
+            <li>You can visit Belle Blade on the eastern shore of Lake Okeechobee where you can explore the growing vegetables in the rich drained muck. </li>
+          </blockquote>
+          <blockquote>
+            <li>It is also worth visiting Everglades National Park, the area's most famous and notable area of attraction. Bordering Tamiami Trail, the Park preserves the largest remaining subtropical wilderness in the United States. The wildlife consists of numerous wild birds and animals, most notably alligators and flamingos. </li>
+          </blockquote>
+          <h2>Gulf Stream Coast:</h2>
+          <blockquote>
+            <li>
+              West Palm Beach is known for its many resorts and fun metropolitan area consisting of hundreds of restaurants, venues and lavish beach resorts.  
+            </li>
+          </blockquote>
+          <blockquote>
+            <li>Palm Beach itself is one of the most luxurious and fashionable winter resorts in the world. </li>
+          </blockquote>
+          <blockquote>
+            <li>Fort Lauderdale is a city of islands, water canals, inlets, and more than 200 miles of other waterway systems. Some of the best fishing in the entire state of Florida is done here and holds a large portion of fleets of charter fishing boats. </li>
+          </blockquote>
+          <blockquote>
+            <li>If you want sparks and all-night adventures, Miami is the place for you. Being the largest city in the state, Miami is also the industrial and cultural hub of the state, much in part to the diverse nature and history of the city. It ranks as one of the great air transportation cities of the world and is an important port of entry from the Caribbean area and South America. This is the land of sun worshipers, luxury hotels, golden beaches and much more. </li>
+          </blockquote>
+          <h2>Florida Keys:</h2>
+          <blockquote>
+            <li>
+              The first island you will go through if you go across the bridges is Key Largo. The biggest island of the keys, it accommodates some resorts and fishing hotspots. 
+            </li>
+          </blockquote>
+          <blockquote>
+            <li>If you want to be entertained, you should consider visiting Key West as it is dedicated to entertainment through and through. It’s a very slow vibe and many of its residents would come to describe their little area as “foreign” looking. It is filled with small shops and small restaurants.  </li>
+          </blockquote>
+          <blockquote>
+            <li>A lot of the food is Spanish and Seafood based so make sure to look for places that may offers something new and tasty. </li>
+          </blockquote>
+        </ul>
+        <img
+          src="https://cdn.glitch.global/dd382712-ee08-4f8a-bf59-18dec469ab4f/roadmap-clipart-md.png?v=1668125100044"
+          class="map"
+        />
+      </section>
+
+      <section class="full-screen hidden" id="slide-2">
+        <h1>General Necessities</h1>
+        <ul>
+          <li>
+            When you’re packing your clothes into your suitcase, make sure to
+            remember to bring an extra one as well for all your soiled [&] wet
+            clothes, making it easier for you to keep everything organized.
+          </li>
+          <li>
+            Since you are vacationing in sunny Florida, it is crucial not to
+            pack any sort of hair spray or other aerosol containers in your
+            luggage. The cause of the extreme heat, which can cause these items
+            to explode, ruining everything else in the suitcase.
+          </li>
+          <li>
+            Pack a small sewing kit, including scissors to snip stray threads on
+            clothing or at least take along a few safety pins and a needle with
+            some thread attached. It’s also important to not lose the needle in
+            the vacation pack.
+          </li>
+          <li>
+            Remember to always leave a little bit of space in your suitcase so
+            that you have some space for potential souvenir purchases.
+          </li>
+          <li>
+            Don’t forget the prescription drugs you are likely to need in case
+            of any emergencies. In addition, bring your eyeglass prescription in
+            case your glasses get broken or lost.
+          </li>
+        </ul>
+        <img
+          src="https://cdn.glitch.global/dd382712-ee08-4f8a-bf59-18dec469ab4f/OkkatotsTravelBag.png?v=1668123859382"
+          class="Necessities"
+        />
+      </section>
+
+      <section class="full-screen hidden" id="slide-3">
+        <h1>Medical</h1>
+        <h2>
+          Medical care during a trip is super important for you as you never
+          know what might happen during a trip. This might be very nitty-gritty
+          but it will definitely keep you healthy and having a blast on your
+          trip.
+        </h2>
+        <h2>It's time to be healthy!</h2>
+        <li>
+          Healing wounds: when going on any trip, you must be equipped with
+          heating utensils. In Florida, there are a lot of cool attractions such
+          as Jet skiing, going on a boat ride even kayaking but you must have
+          these items in case you get hurt.
+        </li>
+        <li>
+          Sun care: Florida is known to be one of the sunniest states in the
+          U.S. Taking care of your skin is a must as it can leave you with
+          really bad burns or even cause cancer in your skin.
+        </li>
+        <li>
+          Health care: Even though in Florida, you might be able to find the
+          majority of the medicine, Don't be too trustworthy. Be sure to Bring
+          Your own medicine as in most pharmacies, you need a prescription to
+          get medicine.
+        </li>
+        <li>
+          Vision care: Be advised that you need a prescription to be able to get
+          glasses or eye contacts in case you lose them. Mostly, If you know you
+          will be going to the beach.
+        </li>
+        <li>
+          Florida is full of insects, and you do not want to be itchy the whole
+          trip. If you plan on going to a park, it is very important you pack
+          the repellent as you will be having an unpleseant trip if you dont.
+        </li>
+        <img
+          src="https://cdn.glitch.global/dd382712-ee08-4f8a-bf59-18dec469ab4f/%E2%80%94Pngtree%E2%80%94drug%20and%20medical_6224398.png?v=1668036698594"
+          class="medical"
+        />
+      </section>
+
+      <section class="full-screen hidden" id="slide-4">
+        <h1>Personal Documents</h1>
+        <h2>
+          Now, it’s time to pack all your crucial personal documents. You are
+          now one step closer to enjoying your vacation.
+        </h2>
+        <ul>
+          <blockquote>
+            <li>
+              By having varied access to currency, whether in the form of cash,
+              credit or debit cards and vouchers, you won’t have to worry about
+              finding an ATM or risking a payment method not being accepted.
+              Many places in South Florida accept card payment options but
+              farmers’ markets like
+              <a href="https://redlandmarketvillage.com/">Redland Market</a> to
+              individual vendors on the beach- their preferred payment option is
+              cash. When a card payment method is available, consider using your
+              credit card to gain points or just settle for your reliable debit
+              card instead.
+            </li>
+          </blockquote>
+          <blockquote>
+            <li>
+              Traveling with identification is crucial to vacation safety as you
+              can properly identify yourself during certain transactions and
+              interactions with the police. Identification can include but is
+              not limited to a state identification card, a passport, a
+              permanent resident card (green card) and a federally recognized
+              Native American Resident Tribal identification card.
+            </li>
+          </blockquote>
+          <blockquote>
+            <li>
+              Keeping a record of confirmations or reservations is critical to
+              prevent sudden overbooking or cancellations. Prevent this by
+              calling ahead of time,
+              <a
+                href="https://travelpro.com/blogs/the-travelpro-blog/hotel-reservations-be-sure-to-confirm-every-detail-of-your-stay"
+                >confirming your place</a
+              >
+              (whether it is at a hotel, restaurant, or event). Save all email
+              confirmations as a PDF file or as an image file for easy sourcing.
+            </li>
+          </blockquote>
+          <blockquote>
+            <li>
+              A general rule of thumb is to store all personal documents in a
+              daily bag, whether it is a backpack or purse for safekeeping.
+            </li>
+          </blockquote>
+        </ul>
+        <img
+          src="https://cdn.glitch.global/dd382712-ee08-4f8a-bf59-18dec469ab4f/kisspng-passport-boarding-pass-vector-passport-5aa0fc4ff2a2c0.7043638815204997919939.png?v=1668124547003"
+          class="documents"
+        />
+      </section>
+
+      <section class="full-screen hidden" id="slide-5">
+        <h1>Entertainment</h1>
+        <h2>
+          Not only is vacationing meant to be a peaceful time, but vacation is
+          also supposed to be packed with fun too. Now, let’s talk about
+          entertainment.
+        </h2>
+        <ul>
+          <blockquote>
+            <li>
+              With personal devices, it’s up to you to decide what devices would
+              be a great addition to your trip or something to keep you
+              entertained during your downtime.
+            </li>
+          </blockquote>
+          <blockquote>
+            <li>
+              Chargers or adapters and other electronic accessories keep your
+              devices operating at their best for any occasion.
+            </li>
+          </blockquote>
+          <blockquote>
+            <li>
+              Books are a reliable and steadfast choice for entertainment
+              whether at the beach or at bedtime.
+            </li>
+          </blockquote>
+          <h2>For kids and family vacations:</h2>
+          <blockquote>
+            <li>
+              Toys are am exciting entertainment option for children in periods of downtime or travel.
+            </li>
+          </blockquote>
+          <blockquote>
+            <li>
+              Board games are also a fun and screenless option and bonding
+              experience for the entire family.
+            </li>
+          </blockquote>
+        </ul>
+        <img
+          src="https://cdn.glitch.global/dd382712-ee08-4f8a-bf59-18dec469ab4f/reversi-game-family-clipart-md.png?v=1668125698400"
+          class="games"
+        />
+      </section>
+
+      <section class="full-screen hidden" id="slide-6">
+        <h1>Summary</h1>
+          <h2>So, you have kept 5 categories in mind while planning to pack -- to prevent unpreparedness and boredom. Now, download your checklist. Enjoy your stay in (South) Florida!</h2>
+        <ul>
+        <blockquote>
+          <h2>
+            Sources:
+          </h2>
+          </blockquote>
+          <blockquote>
+           <li><a href="https://go.gale.com/ps/i.do?p=AONE&u=miam11506&id=GALE%7CA3753703&v=2.1&it=r">Packing for a healthy vacation: your traveling medical kit</a>
+             </li>
+          </blockquote>
+          
+          <blockquote><li><a href="https://www.proquest.com/docview/168968941?parentSessionId=mCaUHjA7QtNOXW3T6ab2B10RKNMnX75MOWtQ3mCGljo%3D&pq-origsite=primo">Advice for Packing for a Motor Vacation</a></li>
+          </blockquote>
+          
+          <blockquote><li><a href="https://www.masstourism.amdigital.co.uk/Documents/Details/UFL_134_3208#Chapters">Florida Vacation Guide</a></li>
+          </blockquote>
+          
+          <blockquote><li><a href="https://go-gale-com.ezproxy.fiu.edu/ps/retrieve.do?tabID=T002&resultListType=RESULT_LIST&searchResultsType=SingleTab&hitCount=4&searchType=BasicSearchForm&currentPosition=3&docId=GALE%7CA133708807&docType=Article&sort=Relevance&contentSegment=ZCUK-MOD1&prodId=PPTH&pageNum=1&contentSet=GALE%7CA133708807&searchId=R8&userGroupName=miam11506&inPS=true">South Florida</a></li>
+          </blockquote>
+        </ul>
+      </section>
+    </div>
+
+    <section id="checklist" class="hidden">
+      <h1>My Packing Checklist</h1>
+      <p>The things I have packed...</p>
+      <h2>Itinerary</h2>
+      <div>
+        <input type="checkbox" name="input1" />
+        <label for="input1">North Florida</label>
+      </div>
+      <div>
+        <input type="checkbox" name="input2" />
+        <label for="input2">Central Florida</label>
+      </div>
+      <div>
+        <input type="checkbox" name="input3" />
+        <label for="input3">Everglades</label>
+      </div>
+      <div>
+        <input type="checkbox" name="input4" />
+        <label for="input4">Gulf Stream Coast</label>
+      </div>
+      <div>
+        <input type="checkbox" name="input5" />
+        <label for="input5">Florida Keys</label>
+      </div>
+      <div>
+        <input type="checkbox" name="input6" />
+        <label for="input6">Special Venues</label>
+      </div>
+      <h2>General Necessities</h2>
+      <div>
+        <input type="checkbox" name="input7" />
+        <label for="input7">Clothes</label>
+      </div>
+      <div>
+        <input type="checkbox" name="input8" />
+        <label for="input8">Luggage</label>
+      </div>
+      <div>
+        <input type="checkbox" name="input9" />
+        <label for="input9">Sewing Kit and Thread</label>
+      </div>
+      <div>
+        <input type="checkbox" name="input10" />
+        <label for="input10">Prescription Drugs</label>
+      </div>
+      <div>
+        <input type="checkbox" name="input11" />
+        <label for="input11">Packing Strategy</label>
+      </div>
+      <div>
+        <input type="checkbox" name="input12" />
+        <label for="input12">Souvenirs</label>
+      </div>
+      <div>
+        <input type="checkbox" name="input13" />
+        <label for="input13">Extra Storage</label>
+      </div>
+      <h2>Medical Information</h2>
+
+      <!-- items to cure wounds during the vacation below-->
+      <h4 class="specific-categories">For Wounds</h4>
+
+      <!--checklist Below-->
+      <div>
+        <input type="checkbox" name="input14" />
+        <label for="input14">Gauze Pads </label>
+      </div>
+      <div>
+        <input type="checkbox" name="input15" />
+        <label for="input15">Roll of Inch-Wide Bandage</label>
+      </div>
+      <div>
+        <input type="checkbox" name="input16" />
+        <label for="input16">Adhesive Strip Bandages </label>
+      </div>
+      <div>
+        <input type="checkbox" name="input17" />
+        <label for="input17">Adhesive Tape</label>
+      </div>
+      <div>
+        <input type="checkbox" name="input18" />
+        <label for="input18">Scissors</label>
+      </div>
+      <div>
+        <input type="checkbox" name="input19" />
+        <label for="input19">Tweezers</label>
+      </div>
+      <div>
+        <input type="checkbox" name="input20" />
+        <label for="input20">Elastic bandage </label>
+      </div>
+      <div>
+        <input type="checkbox" name="input21" />
+        <label for="input21">Safety pins </label>
+      </div>
+      <div>
+        <input type="checkbox" name="input22" />
+        <label for="input22">Alcohol tips </label>
+      </div>
+      <div>
+        <input type="checkbox" name="input23" />
+        <label for="input23">Fever Thermometer </label>
+      </div>
+
+      <!-- items to protect you from the sun during the vacation below-->
+      <h4 class="specific-categories">For the Sun</h4>
+      <!--checklist Below-->
+      <div>
+        <input type="checkbox" name="input24" />
+        <label for="input24">Sunscreen</label>
+      </div>
+
+      <!-- items for health purposes during the vacation below-->
+      <h4 class="specific-categories">For Medicated People</h4>
+
+      <!--checklist Below-->
+      <div>
+        <input type="checkbox" name="input25" />
+        <label for="input25">Any Prescribed Medication </label>
+      </div>
+      <h4 class="checklist-subcategories">Allergy Medications</h4>
+      <!--subchecklist of medicine-->
+
+      <div>
+        <input type="checkbox" name="input26" />
+        <label for="input26">Allegra or Claritin</label>
+      </div>
+      <div>
+        <input type="checkbox" name="input27" />
+        <label for="input27">Other </label>
+      </div>
+
+      <h4 class="checklist-subcategories">Motion Sickness</h4>
+      <!--subchecklist of medicine-->
+
+      <div>
+        <input type="checkbox" name="input28" />
+        <label for="input28">Dramamine </label>
+      </div>
+
+      <!--Separate item-->
+
+      <h4 class="checklist-subcategories">Antibiotics</h4>
+      <!--subchecklist of medicine-->
+
+      <div>
+        <input type="checkbox" name="input30" />
+        <label for="input30">Pepto Bismol </label>
+      </div>
+      <div>
+        <input type="checkbox" name="input31" />
+        <label for="input31">Anti-inflammatory medication</label>
+      </div>
+
+      <h4 class="checklist-subcategories">Pain Reliever</h4>
+
+      <div>
+        <input type="checkbox" name="input32" />
+        <label for="input32">Ibuprofen</label>
+      </div>
+      <div>
+        <input type="checkbox" name="input33" />
+        <label for="input33">Acetaminophen</label>
+      </div>
+      <div>
+        <input type="checkbox" name="input34" />
+        <label for="input35">Other </label>
+      </div>
+
+      <!-- items for health purposes during the vacation below-->
+      <h4 class="specific-categories">For Vision</h4>
+      <!--checklist Below-->
+      <div>
+        <input type="checkbox" name="input36" />
+        <label for="input36">Eye contacts or glasses.</label>
+      </div>
+      <!-- items for health purposes during the vacation below-->
+      <h3 class="specific-categories">For Insects</h3>
+      <!--small paragraph with description-->
+      <div>
+        <input type="checkbox" name="input37" />
+        <label for="input37">Insect Repellent </label>
+      </div>
+
+      <h2>Personal Documents</h2>
+
+      <h4>Money</h4>
+      <div>
+        <input type="checkbox" name="input38" />
+        <label for="input38">Cash</label>
+      </div>
+
+      <div>
+        <input type="checkbox" name="input39" />
+        <label for="input39">Credit Card</label>
+      </div>
+
+      <div>
+        <input type="checkbox" name="input40" />
+        <label for="input40">Debit Card</label>
+      </div>
+
+      <div>
+        <input type="checkbox" name="input41" />
+        <label for="input41">Vouchers</label>
+      </div>
+
+      <h4>Identification</h4>
+
+      <div>
+        <input type="checkbox" name="input42" />
+        <label for="input42">State ID</label>
+      </div>
+
+      <div>
+        <input type="checkbox" name="input43" />
+        <label for="input43">Driver's License</label>
+      </div>
+
+      <div>
+        <input type="checkbox" name="input44" />
+        <label for="input44">Passport</label>
+      </div>
+
+      <div>
+        <input type="checkbox" name="input45" />
+        <label for="input45">Permanent Resident Card</label>
+      </div>
+
+      <div>
+        <input type="checkbox" name="input46" />
+        <label for="input46">Native American Resident Tribal ID</label>
+      </div>
+
+      <h4>Other</h4>
+      <div>
+        <input type="checkbox" name="input47" />
+        <label for="input47">Insurance Card</label>
+      </div>
+
+      <h2>Entertainment</h2>
+      <h4>Personal Devices</h4>
+      <div>
+        <input type="checkbox" name="input48" />
+        <label for="input48">Laptop</label>
+      </div>
+
+      <div>
+        <input type="checkbox" name="input29" />
+        <label for="input49">Tablet</label>
+      </div>
+
+      <div>
+        <input type="checkbox" name="input50" />
+        <label for="input50">Gaming Consoles</label>
+      </div>
+
+      <h4>Electronic Accessories</h4>
+      <div>
+        <input type="checkbox" name="input51" />
+        <label for="input51">Headphones</label>
+      </div>
+
+      <div>
+        <input type="checkbox" name="input52" />
+        <label for="input52">Chargers</label>
+      </div>
+
+      <div>
+        <input type="checkbox" name="input53" />
+        <label for="input53">Adapters</label>
+      </div>
+
+      <h4>Other</h4>
+
+      <div>
+        <input type="checkbox" name="input54" />
+        <label for="input54">Books</label>
+      </div>
+
+      <div>
+        <input type="checkbox" name="input55" />
+        <label for="input55">Toys</label>
+      </div>
+
+      <div>
+        <input type="checkbox" name="input56" />
+        <label for="input56">Board Game(s)</label>
+      </div>
+    </section>
   </body>
 </html>
